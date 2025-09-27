@@ -97,7 +97,7 @@ const Home = () => {
         <div className="hero-profile-pic">
           {/* Ganti 'profile.jpg' dengan nama file foto kamu di folder public */}
           <img 
-            src="./public/profile4.png" 
+            src="/profile4.png" 
             alt="Faris Profile" 
             className="hero-profile-img"
             onError={(e) => {
