@@ -1,0 +1,562 @@
+/* Skills.css */
+
+/* Global Styles */
+body {
+  background-color: #121212;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Animated Code Background Canvas */
+.code-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; 
+  opacity: 0.3; 
+  mix-blend-mode: screen; 
+  pointer-events: none;
+}
+
+/* Header Styles (same as other pages) */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+}
+
+.nav {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #e0e1dd;
+  font-weight: 500;
+  transition: all 0.3s;
+  padding: 8px 16px;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.menu li a:hover,
+.menu li a.active {
+  color: #0042f7;
+  background-color: rgba(97, 218, 251, 0.15);
+}
+
+.active-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #61dafb;
+  border-radius: 50%;
+  display: inline-block;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(97, 218, 251, 0.7); }
+  70% { box-shadow: 0 0 0 6px rgba(97, 218, 251, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(97, 218, 251, 0); }
+}
+
+/* Profile Styles */
+.profile-container {
+  position: relative;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #61dafb;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #61dafb;
+  font-weight: bold;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: #2a2a2a;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  width: 200px;
+  text-align: left;
+  font-size: 0.9rem;
+  z-index: 200;
+  color: #e0e1dd;
+}
+
+.profile-dropdown p {
+  margin: 5px 0;
+}
+
+.profile-name { font-weight: bold !important; }
+.profile-title, .profile-email { color: #cfcfcf !important; }
+.profile-divider { border: 1px solid #333; margin: 10px 0; }
+.profile-action { cursor: pointer; color: #61dafb !important; transition: color 0.3s; }
+.profile-action:hover { color: #21a1f1 !important; }
+
+/* Skills Page Styles */
+.skills-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
+  color: #e0e1dd;
+}
+
+/* Hero Section */
+.skills-hero {
+  padding: 120px 20px 60px;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(97, 218, 251, 0.1) 0%, rgba(33, 161, 241, 0.05) 100%);
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  color: #61dafb;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* 3D Bold White Text Class - Subtle glow, more balanced 3D effect */
+.bold-3d-text {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 
+    2px 2px 4px rgba(0, 0, 0, 0.9),
+    -1px -1px 2px rgba(255, 255, 255, 0.15),
+    0 0 5px rgba(255, 255, 255, 0.15),
+    0 0 8px rgba(255, 255, 255, 0.1);
+  letter-spacing: 0.5px;
+  -webkit-text-fill-color: #ffffff; 
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  color: #cfcfcf;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Skills Summary */
+.skills-summary {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 40px;
+}
+
+.summary-item {
+  text-align: center;
+}
+
+.summary-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #61dafb;
+  margin-bottom: 5px;
+}
+
+.summary-label {
+  font-size: 0.9rem;
+  color: #cfcfcf;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Category Filter */
+.category-filter {
+  padding: 40px 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.filter-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.filter-btn {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 500;
+  min-width: 120px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.filter-btn:hover {
+  background: linear-gradient(145deg, #2a2a2a, #333);
+  border-color: #61dafb;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, #61dafb, #21a1f1);
+  color: #ffffff;
+  border-color: #61dafb;
+  box-shadow: 0 5px 20px rgba(97, 218, 251, 0.3);
+}
+
+/* Filter Label - Bold white text for category names (no uppercase) */
+.filter-label {
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  font-size: 1rem;
+  text-transform: none;
+  letter-spacing: 0.5px;
+}
+
+/* Skills Grid */
+.skills-grid-section {
+  padding: 60px 20px;
+}
+
+.skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+/* Skill Cards */
+.skill-card {
+  background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+  border-radius: 15px;
+  padding: 25px;
+  border: 1px solid #333;
+  transition: all 0.4s ease;
+  opacity: 0;
+  transform: translateY(50px);
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #61dafb, transparent);
+  transition: left 0.6s ease;
+}
+
+.skill-card.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(97, 218, 251, 0.2);
+  border-color: #61dafb;
+}
+
+.skill-card:hover::before {
+  left: 100%;
+}
+
+/* Skill Header - Left aligned */
+.skill-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.skill-details {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 100%;
+}
+
+.skill-name {
+  font-size: 1.1rem;
+  color: #e0e1dd;
+  margin: 0 0 4px 0;
+  font-weight: 600;
+  text-align: left;
+}
+
+.skill-experience {
+  font-size: 0.8rem;
+  color: #cfcfcf;
+  margin: 0;
+  text-align: left;
+}
+
+/* Skill Progress */
+.skill-progress {
+  margin: 15px 0;
+}
+
+.progress-track {
+  width: 100%;
+  height: 6px;
+  background-color: #333;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #61dafb, #21a1f1);
+  border-radius: 3px;
+  transition: width 1.5s ease;
+  box-shadow: 0 0 10px rgba(97, 218, 251, 0.5);
+}
+
+/* Skill Percentage Below - Blue bold with glow and pulse animation (centered) */
+.skill-percentage-below {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #00acc1;
+  text-align: center;
+  margin-top: 8px;
+  text-shadow: 
+    0 0 5px rgba(97, 218, 251, 0.5),
+    0 0 10px rgba(97, 218, 251, 0.3);
+  animation: glow-pulse 2s infinite ease-in-out;
+}
+
+/* Glow Pulse Animation for Percentage */
+@keyframes glow-pulse {
+  0%, 100% {
+    transform: scale(1);
+    text-shadow: 
+      0 0 5px rgba(97, 218, 251, 0.5),
+      0 0 10px rgba(97, 218, 251, 0.3);
+  }
+  50% {
+    transform: scale(1.02);
+    text-shadow: 
+      0 0 8px rgba(97, 218, 251, 0.7),
+      0 0 15px rgba(97, 218, 251, 0.5); 
+  }
+}
+
+/* Skills Philosophy */
+.skills-philosophy {
+  padding: 80px 20px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.philosophy-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.philosophy-content h2 {
+  font-size: 2.5rem;
+  color: #61dafb;
+  margin-bottom: 40px;
+}
+
+.philosophy-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.philosophy-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.philosophy-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.philosophy-card:hover {
+  transform: translateY(-10px);
+  border-color: #61dafb;
+  box-shadow: 0 12px 25px rgba(97, 218, 251, 0.3);
+}
+
+.philosophy-card h3 {
+  color: #61dafb;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.philosophy-card p {
+  color: #cfcfcf;
+  line-height: 1.6;
+}
+
+/* CTA Section */
+.cta-section {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, rgba(97, 218, 251, 0.05) 0%, rgba(33, 161, 241, 0.02) 100%);
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  color: #61dafb;
+  margin-bottom: 20px;
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  color: #cfcfcf;
+  margin:0 auto 40px auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.cta-button {
+  border: none;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.cta-button.primary {
+  background: linear-gradient(135deg, #61dafb, #21a1f1);
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(97, 218, 251, 0.3);
+}
+
+.cta-button.primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(97, 218, 251, 0.4);
+}
+
+.cta-button.secondary {
+  background: transparent;
+  color: #61dafb;
+  border: 2px solid #61dafb;
+}
+
+.cta-button.secondary:hover {
+  background: rgba(97, 218, 251, 0.1);
+  transform: translateY(-3px);
+}
+
+/* GitHub specific button styles */
+.github-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.github-button:hover {
+  background: linear-gradient(135deg, #24292e, #0366d6) !important;
+  box-shadow: 0 10px 25px rgba(36, 41, 46, 0.4) !important;
+}
+
+/* GitHub SVG Icon */
+.github-icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.github-button:hover .github-icon {
+  transform: rotate(360deg);
+}
+
+/* Button icon styles */
+.button-icon {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+}
+
+
