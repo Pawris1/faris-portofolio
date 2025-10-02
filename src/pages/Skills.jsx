@@ -169,8 +169,8 @@ const Skills = () => {
                 <span className="summary-label bold-3d-text">Years Learning Coding</span>
               </div>
               <div className="summary-item">
-                <span className="summary-number">3+</span>
-                <span className="summary-label bold-3d-text">Projects Built</span>
+                <span className="summary-number">10+</span>
+                <span className="summary-label bold-3d-text">Technologies</span>
               </div>
             </div>
           </div>
