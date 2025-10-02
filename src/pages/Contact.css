@@ -168,20 +168,18 @@ body {
 
 .hero-content .hero-subtitle {
   font-size: 1.3rem;
-  background: linear-gradient(135deg, #61dafb 0%, #ffffff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
   color: #ffffff;
+  font-weight: 700;
   margin-bottom: 40px;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.6;
-  font-weight: 700;
   text-shadow: 
-    0 0 10px rgba(97, 218, 251, 0.6),
-    0 2px 4px rgba(0, 0, 0, 0.5);
+    2px 2px 4px rgba(0, 0, 0, 0.9),
+    -1px -1px 2px rgba(255, 255, 255, 0.15),
+    0 0 5px rgba(255, 255, 255, 0.15);
+  letter-spacing: 0.5px;
 }
 
 /* Floating Icons Animation */
@@ -231,15 +229,13 @@ body {
 
 .section-header .section-subtitle {
   font-size: 1.2rem;
-  background: linear-gradient(135deg, #61dafb 0%, #ffffff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
   color: #ffffff;
   font-weight: 700;
   text-shadow: 
-    0 0 8px rgba(97, 218, 251, 0.5),
-    0 2px 4px rgba(0, 0, 0, 0.5);
+    2px 2px 4px rgba(0, 0, 0, 0.9),
+    -1px -1px 2px rgba(255, 255, 255, 0.15),
+    0 0 5px rgba(255, 255, 255, 0.15);
+  letter-spacing: 0.5px;
 }
 
 /* Contact Grid */
@@ -251,16 +247,19 @@ body {
 
 /* Contact Cards */
 .contact-card {
-  background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   padding: 25px;
-  border: 1px solid #333;
   cursor: pointer;
   transition: all 0.4s ease;
   opacity: 0;
   transform: translateY(50px);
   position: relative;
   overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .contact-card.animate-in {
@@ -271,7 +270,7 @@ body {
 .contact-card:hover {
   transform: translateY(-10px) scale(1.02);
   box-shadow: 0 20px 40px rgba(97, 218, 251, 0.2);
-  border-color: #61dafb;
+  border-color: rgba(97, 218, 251, 0.3);
 }
 
 .contact-card-inner {
@@ -472,14 +471,12 @@ body {
   color: #ffffff;
   font-size: 1rem;
   line-height: 1.6;
-  background: linear-gradient(135deg, #b3e5fc 0%, #ffffff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
   font-weight: 700;
   text-shadow: 
-    0 0 6px rgba(179, 229, 252, 0.3), 
-    0 1px 3px rgba(0, 0, 0, 0.6);
+    2px 2px 4px rgba(0, 0, 0, 0.9),
+    -1px -1px 2px rgba(255, 255, 255, 0.15),
+    0 0 5px rgba(255, 255, 255, 0.15);
+  letter-spacing: 0.5px;
 }
 
 @keyframes pulse-status {
